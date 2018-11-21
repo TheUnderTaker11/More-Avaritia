@@ -67,8 +67,7 @@ public class DraconicEvolutionRecipes {
 					'S', new ItemStack(ModUtils.getItemByName(DENames.REACTOR_PART), 1, 0),//Reactor stabilizer
 					'B', new ItemStack(ModBlocks.resource, 1, 1),//Infinity Block
 					'D', creativeCapacitor,
-					'R', new ItemStack(ModUtils.getItemByName(DENames.REACTOR_CORE), 1),
-					'F', new ItemStack(ModUtils.getItemByName(DENames.CRAFTING_INJECTOR), 1, 3)//Chaotic fusion crafting injectorr
+					'R', new ItemStack(ModUtils.getItemByName(DENames.REACTOR_CORE), 1)
 					);
 		}
 	}
