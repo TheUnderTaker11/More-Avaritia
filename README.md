@@ -1,2 +1,4 @@
 # More-Avaritia
-If you wish to take over devolpment of this mod I will explain the basics of adding recipes (it is super easy), just message me on curse or open an issue about it.
+This mod adds Avaritia recipes to otherwise unobtainable items from many other mods! A few examples are the Creative Capacitor Bank, Creative CAD Assembly, Guilty Mana Pool, and much much more!
+
+A list of all items I added recipes to can be found at my [here on my wiki](https://github.com/TheUnderTaker11/More-Avaritia/wiki/List-of-recipes-added)!
