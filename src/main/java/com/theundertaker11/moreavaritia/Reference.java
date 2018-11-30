@@ -2,7 +2,7 @@ package com.theundertaker11.moreavaritia;
 
 public class Reference {
 	public static final String MODID = "moreavaritia";
-	public static final String VERSION = "2.2";
+	public static final String VERSION = "2.3";
 	public static final String NAME = "More Avaritia";
 	public static final String MCVersions = "1.10.2";
 	public static final String CLIENTPROXY = "com.theundertaker11.moreavaritia.proxy.ClientProxy";
