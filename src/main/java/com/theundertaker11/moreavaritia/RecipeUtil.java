@@ -3,7 +3,6 @@ package com.theundertaker11.moreavaritia;
 import morph.avaritia.Avaritia;
 import morph.avaritia.init.ModItems;
 import morph.avaritia.recipe.AvaritiaRecipeManager;
-import morph.avaritia.recipe.extreme.ExtremeCraftingManager;
 import morph.avaritia.recipe.extreme.ExtremeShapedRecipe;
 import morph.avaritia.recipe.extreme.IExtremeRecipe;
 import net.minecraft.item.ItemStack;
@@ -27,8 +26,8 @@ public class RecipeUtil {
 	}
 	
 	public static void addCatalystInput(ItemStack in) {		
-		ResourceLocation loc = new ResourceLocation(Avaritia.MOD_ID, "infinity_catalyst");
-		IExtremeRecipe recipe = ExtremeCraftingManager.REGISTRY.getObject(loc);
+		ResourceLocation loc = new ResourceLocation(Avaritia.MOD_ID, "items/infinity_catalyst");
+		IExtremeRecipe recipe = AvaritiaRecipeManager.EXTREME_RECIPES.get(loc);
 		
 		if(recipe != null)
 			recipe.getIngredients().add(CraftingHelper.getIngredient(in));

@@ -5,7 +5,6 @@ import com.theundertaker11.moreavaritia.ModUtils;
 import com.theundertaker11.moreavaritia.RecipeUtil;
 import com.theundertaker11.moreavaritia.Reference;
 
-import morph.avaritia.recipe.extreme.ExtremeCraftingManager;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Optional;
 

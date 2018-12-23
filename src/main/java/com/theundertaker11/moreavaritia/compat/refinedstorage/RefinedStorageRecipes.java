@@ -7,27 +7,12 @@ import com.theundertaker11.moreavaritia.Reference;
 
 import morph.avaritia.init.ModBlocks;
 import morph.avaritia.init.ModItems;
-import morph.avaritia.recipe.extreme.ExtremeCraftingManager;
 import net.minecraft.item.ItemStack;
 
 import net.minecraftforge.fml.common.Optional;
 
 public class RefinedStorageRecipes {
-/* For copy pasting
-	ExtremeCraftingManager.getInstance().addRecipe(
-			new ItemStack(), 
-			"         ",
-			"         ",
-			"         ",
-			"         ",
-			"         ",
-			"         ",
-			"         ",
-			"         ",
-			"         ",
-			
-			);
-*/
+
 	@Optional.Method(modid = Reference.RefinedStorageModID)
 	public static void init()
 	{
