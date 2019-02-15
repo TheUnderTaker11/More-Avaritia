@@ -12,7 +12,7 @@ import net.minecraftforge.fml.common.Optional;
 
 public class QuantumFluxRecipes {
 
-	@Optional.Method(modid = Reference.RefinedStorageModID)
+	@Optional.Method(modid = Reference.QuantumFluxModID)
 	public static void init()
 	{
 		if(ConfigMain.enableQuantumFluxCatalystItem)
