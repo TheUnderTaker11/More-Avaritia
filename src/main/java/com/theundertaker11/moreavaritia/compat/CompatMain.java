@@ -1,45 +1,33 @@
 package com.theundertaker11.moreavaritia.compat;
 
 import com.theundertaker11.moreavaritia.ConfigMain;
-import com.theundertaker11.moreavaritia.ModUtils;
-import com.theundertaker11.moreavaritia.RecipeUtil;
+import com.theundertaker11.moreavaritia.compat.advsolarpanels.AdvSolarPanelsRecipes;
 import com.theundertaker11.moreavaritia.compat.appliedenergistics.AERecipes;
 import com.theundertaker11.moreavaritia.compat.botania.BotaniaRecipes;
 import com.theundertaker11.moreavaritia.compat.cyberware.CyberwearRecipes;
 import com.theundertaker11.moreavaritia.compat.draconicevolution.DraconicEvolutionRecipes;
 import com.theundertaker11.moreavaritia.compat.enderio.EnderIORecipes;
 import com.theundertaker11.moreavaritia.compat.extrautils2.ExtraUtilitiesRecipes;
+import com.theundertaker11.moreavaritia.compat.extremereactors.ExtremeReactorsRecipes;
 import com.theundertaker11.moreavaritia.compat.psi.PSIRecipes;
 import com.theundertaker11.moreavaritia.compat.quantumflux.QuantumFluxRecipes;
 import com.theundertaker11.moreavaritia.compat.refinedstorage.RefinedStorageRecipes;
+import com.theundertaker11.moreavaritia.compat.rftools.RFToolsRecipes;
+import com.theundertaker11.moreavaritia.compat.simplyjetpacks2.SimplyJetpacksRecipes;
 import com.theundertaker11.moreavaritia.compat.storagedrawers.StorageDrawersRecipes;
-import com.theundertaker11.moreavaritia.compat.thermal.ThermalNames;
 import com.theundertaker11.moreavaritia.compat.thermal.ThermalRecipes;
 import com.theundertaker11.moreavaritia.compat.tinkers.TinkersRecipes;
-
-import morph.avaritia.init.ModBlocks;
-import morph.avaritia.init.ModItems;
-import net.minecraft.init.Items;
-import net.minecraft.item.ItemStack;
 
 public class CompatMain {
 
 	public static void init()
 	{
-		RecipeUtil.addRecipe(
-				new ItemStack(ModUtils.getItemByName(ThermalNames.UPGRADE), 1, 256), 
-				"AAAAAAAAA",
-				"AAAAAAAAA",
-				"AAAAAAAAA",
-				"AAAAAAAAA",
-				"AAAAAAAAA",
-				"AAAAAAAAA",
-				"AAAAAAAAA",
-				"AAAAAAAAA",
-				"AAAAAAAAA",
-				'A', Items.IRON_INGOT
-				);
-		
+		if(ConfigMain.enableAdvSolarPanels)
+		{
+			try{
+				AdvSolarPanelsRecipes.init();
+			}catch(NoSuchMethodError e){}
+		}
 		if(ConfigMain.enableAE)
 		{
 			try{
@@ -79,6 +67,14 @@ public class CompatMain {
 				ExtraUtilitiesRecipes.init();
 			}catch(NoSuchMethodError e){}
 		}
+		
+		if(ConfigMain.enableExtremeReactors)
+		{
+			try{
+				ExtremeReactorsRecipes.init();
+			}catch(NoSuchMethodError e){}
+		}
+		
 		if(ConfigMain.enablePSI)
 		{
 			try{
@@ -96,6 +92,20 @@ public class CompatMain {
 		{
 			try{
 				RefinedStorageRecipes.init();
+			}catch(NoSuchMethodError e){}
+		}
+		
+		if(ConfigMain.enableRFTools)
+		{
+			try{
+				RFToolsRecipes.init();
+			}catch(NoSuchMethodError e){}
+		}
+		
+		if(ConfigMain.enableSimplyJetpacks)
+		{
+			try{
+				SimplyJetpacksRecipes.init();
 			}catch(NoSuchMethodError e){}
 		}
 		

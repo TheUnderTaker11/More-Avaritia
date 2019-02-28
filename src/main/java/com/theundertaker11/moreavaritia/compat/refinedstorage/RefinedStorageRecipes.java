@@ -51,17 +51,17 @@ public class RefinedStorageRecipes {
 					new ItemStack(ModUtils.getItemByName(RSNames.CONTROLLER), 1, 1),
 					"INNNANNNI",
 					"NFFFAFFFN",
-					"NFFIAIFFN",
-					"NFIICIIFN",
-					"AAACCCAAA",
-					"NSIICIISN",
-					"NSSIAISSN",
+					"NFFAAAFFN",
+					"NFAACAAFN",
+					"AAACICAAA",
+					"NSAACAASN",
+					"NSSAAASSN",
 					"NSSSASSSN",
 					"INNNANNNI",
 					'C', new ItemStack(ModUtils.getItemByName(RSNames.CONTROLLER), 1, 0),//Regular controller
 					'A', new ItemStack(ModUtils.getItemByName(RSNames.PROCESSOR), 1, 5),//Advanced proccessor
 					'N', ModItems.neutronium_ingot,
-					'I', ModItems.infinity_ingot,
+					'I', ModItems.infinity_catalyst,
 					'S', new ItemStack(ModUtils.getItemByName(RSNames.STORAGE_PART), 1, 3),//64k item storage
 					'F', new ItemStack(ModUtils.getItemByName(RSNames.FLUID_STORAGE_PART), 1, 3)//512k fluid storage
 					);

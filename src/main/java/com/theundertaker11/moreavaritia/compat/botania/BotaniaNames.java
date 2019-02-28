@@ -6,17 +6,17 @@ public class BotaniaNames {
 
 	private static final String id = Reference.BotaniaModID+":";
 	public static final String POOL = id+"pool";
-	public static final String TABLET = id+"manaTablet";
-	public static final String RESOURCE = id+"manaResource";
+	public static final String TABLET = id+"manatablet";
+	public static final String RESOURCE = id+"manaresource";
 	public static final String STORAGE = id+"storage";
 	public static final String RUNE = id+"rune";
 	public static final String DICE = id+"dice";
-	public static final String MIRROR = id+"manaMirror";
-	public static final String LIFE_AGGREGATOR = id+"spawnerMover";
-	public static final String GRISAIA_FRUIT = id+"infiniteFruit";
-	public static final String THOR = id+"thorRing";
-	public static final String ODIN = id+"odinRing";
-	public static final String FLUGEL_EYE = id+"flugelEye";
-	public static final String KING_KEY = id+"kingKey";
-	public static final String FLIGHT_ITEM = id+"flightTiara";
+	public static final String MIRROR = id+"manamirror";
+	public static final String LIFE_AGGREGATOR = id+"spawnermover";
+	public static final String GRISAIA_FRUIT = id+"infinitefruit";
+	public static final String THOR = id+"thorring";
+	public static final String ODIN = id+"odinring";
+	public static final String FLUGEL_EYE = id+"flugeleye";
+	public static final String KING_KEY = id+"kingkey";
+	public static final String FLIGHT_ITEM = id+"flighttiara";
 }

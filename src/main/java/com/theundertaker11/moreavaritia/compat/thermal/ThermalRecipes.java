@@ -18,7 +18,7 @@ public class ThermalRecipes {
 	{
 		if(ConfigMain.enableThermalCatalystItem)
 		{
-			RecipeUtil.addCatalystInput(new ItemStack(ModUtils.getItemByName(ThermalNames.STORAGE_BLOCK), 1, 7));
+			//RecipeUtil.addCatalystInput(new ItemStack(ModUtils.getItemByName(ThermalNames.STORAGE_BLOCK), 1, 7));
 		}
 		if(ConfigMain.enableThermalCreativeUpgrade)
 		{

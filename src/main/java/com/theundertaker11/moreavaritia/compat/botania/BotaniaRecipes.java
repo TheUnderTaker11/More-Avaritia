@@ -58,9 +58,9 @@ public class BotaniaRecipes {
 					"IPPGTSPPI",
 					"IPBBEBBPI",
 					"IOBLMLBRI",
-					"QBEMAMEBU",
+					"QBBMAMBBU",
 					"IDBLMLBDI",
-					"IPBBEBBPI",
+					"IPBBBBBPI",
 					"IPPDBDPPI",
 					"FIIIVIIIW",
 					'Z', new ItemStack(ModUtils.getItemByName(BotaniaNames.RUNE), 1, 14),//Envy

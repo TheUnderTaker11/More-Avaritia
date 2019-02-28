@@ -4,6 +4,9 @@ import net.minecraftforge.common.config.Configuration;
 
 public class ConfigMain {
 	
+	public static boolean enableAdvSolarPanels;
+	public static boolean enableQuantumGenerator;
+	
 	public static boolean enableAE;
 	public static boolean enableAECatalystItem;
 	public static boolean enableAEEnergyCell;
@@ -31,6 +34,10 @@ public class ConfigMain {
 	public static boolean enableExUCreativeEnergySource;
 	public static boolean enableExUCreativeDrum;
 	
+	public static boolean enableExtremeReactors;
+	public static boolean enableERCreativeCoolantPort;
+	public static boolean enableERCreativeSteamGen;
+	
 	public static boolean enablePSI;
 	public static boolean enablePSICatalystItem;
 	public static boolean enableCreativeCadAssembly;
@@ -45,6 +52,13 @@ public class ConfigMain {
 	public static boolean enableRSStorageDisk;
 	public static boolean enableRSFluidStorageDisk;
 	public static boolean enableRSInfinityCatalystItem;
+	
+	public static boolean enableRFTools;
+	public static boolean enableCreativePowercell;
+	//public static boolean enableDimShardRecipe; Not needed past 1.10.2
+	
+	public static boolean enableSimplyJetpacks;
+	public static boolean enableCreativeJetpack;
 	
 	public static boolean enableStorageDrawers;
 	public static boolean enableCreativeStorageUpgrade;
@@ -65,15 +79,18 @@ public class ConfigMain {
 		//Start master switch config.
 		final String MASTER = "A Master Config";
 		config.addCustomCategoryComment(MASTER, "Set any values to false to disable all interactions with that mod. Disabling a mod here will make all other config options releating to it pointless.");
+		enableAdvSolarPanels = config.getBoolean("Advanced Solar Panels", MASTER, true, "");
 		enableAE = config.getBoolean("Applied Energistics 2", MASTER, true, "");
 		enableBotania = config.getBoolean("Botania", MASTER, true, "");
 		enableCyberwear = config.getBoolean("Cyberware", MASTER, true, "");
 		enableDE = config.getBoolean("Draconic Evolution", MASTER, true, "");
 		enableEnderIO = config.getBoolean("EnderIO", MASTER, true, "");
 		enableExtraUtilities = config.getBoolean("Extra Utilities", MASTER, true, "");
+		enableExtremeReactors = config.getBoolean("Extreme Reactors", MASTER, true, "");
 		enablePSI = config.getBoolean("PSI", MASTER, true, "");
 		enableQuantumFlux = config.getBoolean("Quantum Flux", MASTER, true, "");
 		enableRS = config.getBoolean("Refined Storage", MASTER, true, "");
+		enableRFTools = config.getBoolean("RFTools", MASTER, true, "");
 		enableStorageDrawers = config.getBoolean("Storage Drawers", MASTER, true, "");
 		enableThermalExpansion = config.getBoolean("Thermal Expansion", MASTER, true, "");
 		enableTinkers = config.getBoolean("Tinkers Construct", MASTER, true, "");
@@ -84,13 +101,17 @@ public class ConfigMain {
 		enableAECatalystItem = config.getBoolean("Applied Energistics 2", INF, true, "");
 		enableBotaniaCatalystItem = config.getBoolean("Botania", INF, true, "");
 		enableDEInfinityCatalystItem = config.getBoolean("Draconic Evolution", INF, true, "");
-		enableEnderIOCatalystItem = config.getBoolean("EnderIO", INF, true, "");
+		//enableEnderIOCatalystItem = config.getBoolean("EnderIO", INF, true, "");
 		enablePSICatalystItem = config.getBoolean("PSI", INF, true, "");
 		enableRSInfinityCatalystItem = config.getBoolean("Refined Storage", INF, true, "");
-		enableThermalCatalystItem = config.getBoolean("Thermal Expansion/Foundation", INF, true, "");
+		//enableThermalCatalystItem = config.getBoolean("Thermal Expansion/Foundation", INF, true, "");
 		enableTinkersCatalystItem = config.getBoolean("Tinkers Construct", INF, true, "");
 		
 		enableQuantumFluxCatalystItem = config.getBoolean("Quantum Flux", INF, false, "");
+		
+		// Advanced Solar panels
+		final String ASP = "Advanced Solar Panels Config";
+		enableQuantumGenerator = config.getBoolean("Enable Creative Energy Cell", ASP, true, "");
 		
 		//Start Applied Energistics 2
 		final String AE = "Applied Energistics 2 Config";
@@ -109,6 +130,7 @@ public class ConfigMain {
 		final String DE = "Draconic Evolution Config";
 		enableDECreativeCapacitor = config.getBoolean("Enable Creative Flux Capacitor recipe", DE, true, "");
 		enableDECreativeRFSource = config.getBoolean("Enable Creative RF Source recipe", DE, true, "");
+		
 		//Start EnderIO
 		final String ENDERIO = "EnderIO Config";
 		enableCreativeCapBank = config.getBoolean("Enable Creative Capacitor Bank recipe", ENDERIO, true, "");
@@ -121,6 +143,11 @@ public class ConfigMain {
 		enableExUCreativeSpikes = config.getBoolean("Enable Creative Spikes recipe", EU, true, "");
 		enableExUCreativeDrum = config.getBoolean("Enable Creative Drum recipe", EU, true, "");
 		
+		//Start Extreme Reactors
+		final String ER = "Extreme Reactors Config";
+		enableERCreativeCoolantPort = config.getBoolean("Enable Creative Reactor Coolant Port", ER, true, "Provides infinite water aka no reason to disble");
+		enableERCreativeSteamGen = config.getBoolean("Enable Creative Reactor Steam Generator", ER, true, "");
+		
 		//Start PSI
 		final String PSI = "PSI Config";
 		enableCreativeCadAssembly = config.getBoolean("Enable Creative CAD Assembly recipe", PSI, true, "");
@@ -128,12 +155,17 @@ public class ConfigMain {
 		//Start Quantum Flux
 		final String QF = "Quantum Flux Config";
 		enableCreativeQuibitCluster = config.getBoolean("Enable Creative Quibit Cluster recipe", QF, true, "");
+		
 		//Start Refined Storage
 		final String RS = "Refined Storage Config";
 		enableRSController = config.getBoolean("Enable Creative Controller recipe", RS, true, "Disabling this will make the recipe for Creative disk a bit easier if they are still enabled.");
 		enableRSWirelessGrid = config.getBoolean("Enable Creative Wireless Grid recipe", RS, true, "");
 		enableRSStorageDisk = config.getBoolean("Enable Creative Storage Disk recipe", RS, true, "Look at recipe before disabling, it is rough.");
 		enableRSFluidStorageDisk = config.getBoolean("Enable Creative Fluid Storage Disk recipe", RS, true, "Look at recipe before disabling, it is rough.");
+		
+		//Start RFTools
+		final String RFT = "RFTools Config";
+		enableCreativePowercell = config.getBoolean("Enable Creative Powercell", RFT, true, "");
 		
 		//Start Storage Drawers
 		final String SD = "Storage Drawers Config";

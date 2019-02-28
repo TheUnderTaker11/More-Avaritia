@@ -5,6 +5,7 @@ import com.theundertaker11.moreavaritia.ModUtils;
 import com.theundertaker11.moreavaritia.RecipeUtil;
 import com.theundertaker11.moreavaritia.Reference;
 
+import morph.avaritia.init.ModBlocks;
 import morph.avaritia.init.ModItems;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Optional;
@@ -36,10 +37,10 @@ public class PSIRecipes {
 					'A', new ItemStack(ModUtils.getItemByName(PSINames.CAD_ASSEMBLY), 1, 4),//Ivory CAD assembly
 					'R', ModItems.redstoneSingularity,
 					'P', ModItems.endest_pearl,
-					'B', new ItemStack(ModUtils.getItemByName(PSINames.DECORATIVE), 1, 2),//Psigem block
+					'I', new ItemStack(ModUtils.getItemByName(PSINames.DECORATIVE), 1, 2),//Psigem block
 					'N', ModItems.neutronium_ingot,
-					'I', ModItems.infinity_ingot,
-					'C', ModItems.infinity_catalyst
+					'B', ModItems.infinity_ingot,
+					'C', new ItemStack(ModBlocks.resource, 1, 1)//Infinity Block
 					);
 		}
 	}
