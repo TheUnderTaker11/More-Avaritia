@@ -2,8 +2,8 @@ package com.theundertaker11.moreavaritia.compat.botania;
 
 import com.theundertaker11.moreavaritia.ConfigMain;
 import com.theundertaker11.moreavaritia.ModUtils;
-import com.theundertaker11.moreavaritia.RecipeUtil;
 import com.theundertaker11.moreavaritia.Reference;
+import com.theundertaker11.moreavaritia.recipe.RecipeUtil;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;

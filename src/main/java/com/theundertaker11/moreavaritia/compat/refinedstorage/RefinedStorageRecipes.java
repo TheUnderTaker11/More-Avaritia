@@ -2,8 +2,8 @@ package com.theundertaker11.moreavaritia.compat.refinedstorage;
 
 import com.theundertaker11.moreavaritia.ConfigMain;
 import com.theundertaker11.moreavaritia.ModUtils;
-import com.theundertaker11.moreavaritia.RecipeUtil;
 import com.theundertaker11.moreavaritia.Reference;
+import com.theundertaker11.moreavaritia.recipe.RecipeUtil;
 
 import morph.avaritia.init.ModBlocks;
 import morph.avaritia.init.ModItems;
