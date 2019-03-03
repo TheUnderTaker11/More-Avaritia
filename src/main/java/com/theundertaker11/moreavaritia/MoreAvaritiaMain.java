@@ -5,19 +5,23 @@ import com.theundertaker11.moreavaritia.items.ItemRegistry;
 import com.theundertaker11.moreavaritia.proxy.CommonProxy;
 import com.theundertaker11.moreavaritia.recipe.CraftingManagerMain;
 
-import appeng.core.CreativeTab;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.IRecipe;
 import net.minecraftforge.common.config.Configuration;
+import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 @Mod(modid = Reference.MODID, version = Reference.VERSION, dependencies = "required-after:avaritia", acceptedMinecraftVersions = Reference.MCVersions)//,after:enderio,after:storagedrawers")
+@EventBusSubscriber
 public class MoreAvaritiaMain
 {
 	CreativeTabs tab = new MATab(CreativeTabs.getNextID(), "MATab");
@@ -34,8 +38,13 @@ public class MoreAvaritiaMain
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
-        CompatMain.init();
-        CraftingManagerMain.init();
+        
+    }
+    
+    @SubscribeEvent
+    public static void registerRecipes(RegistryEvent.Register<IRecipe> event) {
+    	CraftingManagerMain.init();
+    	CompatMain.initRecipes();
     }
 }
 

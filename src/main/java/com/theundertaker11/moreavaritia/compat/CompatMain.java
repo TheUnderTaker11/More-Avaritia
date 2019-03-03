@@ -3,6 +3,7 @@ package com.theundertaker11.moreavaritia.compat;
 import com.theundertaker11.moreavaritia.ConfigMain;
 import com.theundertaker11.moreavaritia.compat.advsolarpanels.AdvSolarPanelsRecipes;
 import com.theundertaker11.moreavaritia.compat.appliedenergistics.AERecipes;
+import com.theundertaker11.moreavaritia.compat.bloodmagic.BMRecipes;
 import com.theundertaker11.moreavaritia.compat.botania.BotaniaRecipes;
 import com.theundertaker11.moreavaritia.compat.cyberware.CyberwearRecipes;
 import com.theundertaker11.moreavaritia.compat.draconicevolution.DraconicEvolutionRecipes;
@@ -20,7 +21,7 @@ import com.theundertaker11.moreavaritia.compat.tinkers.TinkersRecipes;
 
 public class CompatMain {
 
-	public static void init()
+	public static void initRecipes()
 	{
 		if(ConfigMain.enableAdvSolarPanels)
 		{
@@ -34,7 +35,11 @@ public class CompatMain {
 				AERecipes.init();
 			}catch(NoSuchMethodError e){}
 		}
-		
+		if(ConfigMain.enableBloodMagic) {
+			try{
+				BMRecipes.init();
+			}catch(NoSuchMethodError e){}
+		}
 		if(ConfigMain.enableBotania)
 		{
 			try{

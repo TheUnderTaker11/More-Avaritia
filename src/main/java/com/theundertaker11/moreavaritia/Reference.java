@@ -2,7 +2,7 @@ package com.theundertaker11.moreavaritia;
 
 public class Reference {
 	public static final String MODID = "moreavaritia";
-	public static final String VERSION = "3.1";
+	public static final String VERSION = "3.2";
 	public static final String NAME = "More Avaritia";
 	public static final String MCVersions = "1.12.2";
 	public static final String CLIENTPROXY = "com.theundertaker11.moreavaritia.proxy.ClientProxy";
@@ -10,6 +10,7 @@ public class Reference {
 	
 	public static final String AdvancedSolarPanelsModID = "advanced_solar_panels";
 	public static final String AppliedEnergisticsModID = "appliedenergistics2";
+	public static final String BloodMagicModID = "bloodmagic";
 	public static final String BotaniaModID = "botania";
 	public static final String CyberwearModID = "cyberware";
 	public static final String DraconicEvolutionModID = "draconicevolution";

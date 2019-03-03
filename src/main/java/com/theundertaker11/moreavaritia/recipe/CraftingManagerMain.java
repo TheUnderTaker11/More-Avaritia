@@ -1,5 +1,6 @@
 package com.theundertaker11.moreavaritia.recipe;
 
+import com.theundertaker11.moreavaritia.ConfigMain;
 import com.theundertaker11.moreavaritia.ModUtils;
 import com.theundertaker11.moreavaritia.compat.extrautils2.ExUtilNames;
 import com.theundertaker11.moreavaritia.items.ItemRegistry;
@@ -13,8 +14,8 @@ public class CraftingManagerMain {
 	public static void init() {
 		
 		//Infinity-1 Pickaxe
-		RecipeUtil.addRecipe(
-				new ItemStack(ItemRegistry.InfinityPickM1),
+		if(ConfigMain.enableInfinityMPick) {
+			RecipeUtil.addRecipe( new ItemStack(ItemRegistry.InfinityPickM1),
 				" MMMBMMM ",
 				"MBBBBBBBM",
 				"MB  N  BM",
@@ -28,10 +29,10 @@ public class CraftingManagerMain {
 				'N', new ItemStack(ModBlocks.resource, 1, 0), // Neutronium Block
 				'B', new ItemStack(ModBlocks.resource, 1, 2)
 				);
-		
+		}
 		//Infinity-1 Hoe
-		RecipeUtil.addRecipe(
-				new ItemStack(ItemRegistry.InfinityHoeM1),
+		if(ConfigMain.enableInfinityMHoe) {
+			RecipeUtil.addRecipe( new ItemStack(ItemRegistry.InfinityHoeM1),
 				"     N   ",
 				" BBBBBB  ",
 				"BMMMMMM  ",
@@ -45,6 +46,7 @@ public class CraftingManagerMain {
 				'N', new ItemStack(ModBlocks.resource, 1, 0), // Neutronium Block
 				'B', new ItemStack(ModBlocks.resource, 1, 2) // Crytal matrix block
 				);
+		}
 
 	}
 }

@@ -11,12 +11,12 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraftforge.common.util.EnumHelper;
 
-public class InfinityMinus1Hoe extends ItemHoe implements IItemModelProvider{
+public class InfinityM1Hoe extends ItemHoe implements IItemModelProvider{
 
 	private static final ToolMaterial TOOL_MATERIAL = EnumHelper.addToolMaterial("INFINITY_HOE-1", 0, 9999, 9999F, 3.0F, 200);
 	private static String name;
 	
-	public InfinityMinus1Hoe(String name) {
+	public InfinityM1Hoe(String name) {
 		super(TOOL_MATERIAL);
 		this.name = name;
 		setRegistryName(name);

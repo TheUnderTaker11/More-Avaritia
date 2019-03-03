@@ -2,12 +2,15 @@ package com.theundertaker11.moreavaritia.items.tools;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
+import com.google.common.collect.ImmutableSet;
 import com.theundertaker11.moreavaritia.ModUtils;
 import com.theundertaker11.moreavaritia.MoreAvaritiaMain;
 import com.theundertaker11.moreavaritia.render.IItemModelProvider;
 
 import morph.avaritia.Avaritia;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.player.EntityPlayer;
@@ -25,12 +28,12 @@ import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.EnumHelper;
 
-public class InfinityMinus1Pick extends ItemPickaxe implements IItemModelProvider{
+public class InfinityM1Pick extends ItemPickaxe implements IItemModelProvider{
 	
-	private static String name;
-	private static final ToolMaterial TOOL_MATERIAL = EnumHelper.addToolMaterial("INFINITY_PICKAXEM1", 99, 99999, 9999999F, 6.0F, 200);
+	protected static String name;
+	public static final ToolMaterial TOOL_MATERIAL = EnumHelper.addToolMaterial("INFINITY", 99, 99999, 9999999F, 6.0F, 200);
 	
-	public InfinityMinus1Pick(String name) {
+	public InfinityM1Pick(String name) {
 		super(TOOL_MATERIAL);
 		this.name = name;
 		setRegistryName(name);
@@ -59,14 +62,31 @@ public class InfinityMinus1Pick extends ItemPickaxe implements IItemModelProvide
             if (EnchantmentHelper.getEnchantmentLevel(Enchantments.SILK_TOUCH, stack) > 0) {
                 stack.addEnchantment(Enchantments.FORTUNE, 3);
                 ModUtils.removeEnchant(stack, Enchantments.SILK_TOUCH);
-                player.sendMessage(new TextComponentString("Set to Fortune III"));
+                if(!world.isRemote) player.sendMessage(new TextComponentString("Set to Fortune III"));
             }else {
             	ModUtils.removeEnchant(stack, Enchantments.FORTUNE);
                 stack.addEnchantment(Enchantments.SILK_TOUCH, 1);
-                player.sendMessage(new TextComponentString("Set to Silk Touch"));
+                if(!world.isRemote) player.sendMessage(new TextComponentString("Set to Silk Touch"));
             }
             return new ActionResult<>(EnumActionResult.SUCCESS, stack);
         }
         return new ActionResult<>(EnumActionResult.PASS, stack);
+    }
+	
+	@Override
+	public Set<String> getToolClasses(ItemStack stack) {
+	    return ImmutableSet.of("pickaxe", "spade", "axe");
+	}
+	
+	@Override
+	public boolean canHarvestBlock(IBlockState blockIn) 
+	{
+	    return true;
+	}
+	
+	@Override
+	public float getDestroySpeed(ItemStack stack, IBlockState state)
+    {
+		return 1000000;
     }
 }

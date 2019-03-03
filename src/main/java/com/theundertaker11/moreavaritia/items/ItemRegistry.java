@@ -1,7 +1,7 @@
 package com.theundertaker11.moreavaritia.items;
 
-import com.theundertaker11.moreavaritia.items.tools.InfinityMinus1Hoe;
-import com.theundertaker11.moreavaritia.items.tools.InfinityMinus1Pick;
+import com.theundertaker11.moreavaritia.items.tools.InfinityM1Hoe;
+import com.theundertaker11.moreavaritia.items.tools.InfinityM1Pick;
 import com.theundertaker11.moreavaritia.render.IItemModelProvider;
 
 import net.minecraft.item.Item;
@@ -19,8 +19,8 @@ public class ItemRegistry {
 	
 	@SubscribeEvent
 	public static void init(RegistryEvent.Register<Item> event) {
-		InfinityPickM1 = register(event, new InfinityMinus1Pick("infinitympick"));
-		InfinityHoeM1 = register(event, new InfinityMinus1Hoe("infinitymhoe"));
+		InfinityPickM1 = register(event, new InfinityM1Pick("infinitympick"));
+		InfinityHoeM1 = register(event, new InfinityM1Hoe("infinitymhoe"));
 	}
 	
 	private static <T extends Item> T register(RegistryEvent.Register<Item> event, T item) {

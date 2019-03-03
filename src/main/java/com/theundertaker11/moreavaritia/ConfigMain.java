@@ -4,12 +4,18 @@ import net.minecraftforge.common.config.Configuration;
 
 public class ConfigMain {
 	
+	public static boolean enableInfinityMPick;
+	public static boolean enableInfinityMHoe;
+	
 	public static boolean enableAdvSolarPanels;
 	public static boolean enableQuantumGenerator;
 	
 	public static boolean enableAE;
 	public static boolean enableAECatalystItem;
 	public static boolean enableAEEnergyCell;
+	
+	public static boolean enableBloodMagic;
+	public static boolean enableCreativeSacDagger;
 	
 	public static boolean enableBotania;
 	public static boolean enableBotaniaCatalystItem;
@@ -75,12 +81,15 @@ public class ConfigMain {
 	public static void init(Configuration config)
 	{
 		config.load();
+		final String ITEMS = "More Avaritia Items";
+		config.addCustomCategoryComment(ITEMS, "Disabling any items will simply disable the recipe for that item.");
 		
 		//Start master switch config.
 		final String MASTER = "A Master Config";
 		config.addCustomCategoryComment(MASTER, "Set any values to false to disable all interactions with that mod. Disabling a mod here will make all other config options releating to it pointless.");
 		enableAdvSolarPanels = config.getBoolean("Advanced Solar Panels", MASTER, true, "");
 		enableAE = config.getBoolean("Applied Energistics 2", MASTER, true, "");
+		enableBloodMagic = config.getBoolean("Blood Magic", MASTER, true, "");
 		enableBotania = config.getBoolean("Botania", MASTER, true, "");
 		enableCyberwear = config.getBoolean("Cyberware", MASTER, true, "");
 		enableDE = config.getBoolean("Draconic Evolution", MASTER, true, "");
@@ -116,6 +125,10 @@ public class ConfigMain {
 		//Start Applied Energistics 2
 		final String AE = "Applied Energistics 2 Config";
 		enableAEEnergyCell = config.getBoolean("Enable Creative Energy Cell", AE, true, "Keep in mind this can only be used to power your applied energistics system, no other machines or anything.");
+		
+		//Start Blood Magic
+		final String BM = "Blood Magic";
+		enableCreativeSacDagger = config.getBoolean("Enable Creative Sacrifical Dagger recipe", BM, true, "");
 		
 		//Start Botania
 		final String B = "Botania Config";
