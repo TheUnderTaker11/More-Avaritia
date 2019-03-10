@@ -25,12 +25,12 @@ public class RecipeUtil {
 		AvaritiaRecipeManager.EXTREME_RECIPES.put(key, recipe.setRegistryName(key));
 	}
 	
-	public static void addCatalystInput(ItemStack in) {		
+	public static void addCatalystInput(ItemStack stack) {		
 		ResourceLocation loc = new ResourceLocation(Avaritia.MOD_ID, "items/infinity_catalyst");
 		IExtremeRecipe recipe = AvaritiaRecipeManager.EXTREME_RECIPES.get(loc);
 		
 		if(recipe != null)
-			recipe.getIngredients().add(CraftingHelper.getIngredient(in));
+			recipe.getIngredients().add(CraftingHelper.getIngredient(stack));
 	}
 
 }

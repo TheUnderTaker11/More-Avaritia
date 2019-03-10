@@ -31,10 +31,10 @@ import net.minecraftforge.common.util.EnumHelper;
 public class InfinityM1Pick extends ItemPickaxe implements IItemModelProvider{
 	
 	protected static String name;
-	public static final ToolMaterial TOOL_MATERIAL = EnumHelper.addToolMaterial("INFINITY", 99, 99999, 9999999F, 6.0F, 200);
+	public static final ToolMaterial TOOL_MATERIAL_PICK = EnumHelper.addToolMaterial("infinitypick", 99, 99999, 9999999F, 6.0F, 200);
 	
 	public InfinityM1Pick(String name) {
-		super(TOOL_MATERIAL);
+		super(TOOL_MATERIAL_PICK);
 		this.name = name;
 		setRegistryName(name);
 		setUnlocalizedName(name);

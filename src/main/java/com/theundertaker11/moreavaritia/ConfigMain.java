@@ -6,7 +6,10 @@ public class ConfigMain {
 	
 	public static boolean enableInfinityMPick;
 	public static boolean enableInfinityMHoe;
+	public static boolean enableInfinityMSword;
+	public static boolean enableBalancedInfinitySword;
 	
+	//Start other mod's stuff
 	public static boolean enableAdvSolarPanels;
 	public static boolean enableQuantumGenerator;
 	
@@ -83,6 +86,10 @@ public class ConfigMain {
 		config.load();
 		final String ITEMS = "More Avaritia Items";
 		config.addCustomCategoryComment(ITEMS, "Disabling any items will simply disable the recipe for that item.");
+		enableInfinityMPick = config.getBoolean("Enable Infinity-1 Pickaxe (multitool) Recipe", ITEMS, true, "");
+		enableInfinityMHoe = config.getBoolean("Enable Infinity-1 Hoe Recipe", ITEMS, true, "");
+		enableInfinityMSword = config.getBoolean("Enable Infinity-1 Sword Recipe", ITEMS, true, "");
+		enableBalancedInfinitySword = config.getBoolean("Enable Balanced Infinity Sword Recipe", ITEMS, true, "");
 		
 		//Start master switch config.
 		final String MASTER = "A Master Config";
@@ -115,8 +122,7 @@ public class ConfigMain {
 		enableRSInfinityCatalystItem = config.getBoolean("Refined Storage", INF, true, "");
 		//enableThermalCatalystItem = config.getBoolean("Thermal Expansion/Foundation", INF, true, "");
 		enableTinkersCatalystItem = config.getBoolean("Tinkers Construct", INF, true, "");
-		
-		enableQuantumFluxCatalystItem = config.getBoolean("Quantum Flux", INF, false, "");
+		enableQuantumFluxCatalystItem = config.getBoolean("Quantum Flux", INF, true, "");
 		
 		// Advanced Solar panels
 		final String ASP = "Advanced Solar Panels Config";

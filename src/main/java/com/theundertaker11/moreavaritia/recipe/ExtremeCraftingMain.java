@@ -9,13 +9,13 @@ import morph.avaritia.init.ModBlocks;
 import morph.avaritia.init.ModItems;
 import net.minecraft.item.ItemStack;
 
-public class CraftingManagerMain {
+public class ExtremeCraftingMain {
 
 	public static void init() {
 		
 		//Infinity-1 Pickaxe
 		if(ConfigMain.enableInfinityMPick) {
-			RecipeUtil.addRecipe( new ItemStack(ItemRegistry.InfinityPickM1),
+			RecipeUtil.addRecipe( new ItemStack(ItemRegistry.InfinityM1Pick),
 				" MMMBMMM ",
 				"MBBBBBBBM",
 				"MB  N  BM",
@@ -32,7 +32,7 @@ public class CraftingManagerMain {
 		}
 		//Infinity-1 Hoe
 		if(ConfigMain.enableInfinityMHoe) {
-			RecipeUtil.addRecipe( new ItemStack(ItemRegistry.InfinityHoeM1),
+			RecipeUtil.addRecipe( new ItemStack(ItemRegistry.InfinityM1Hoe),
 				"     N   ",
 				" BBBBBB  ",
 				"BMMMMMM  ",
@@ -48,5 +48,41 @@ public class CraftingManagerMain {
 				);
 		}
 
+		//Infinity-1 Sword
+		if(ConfigMain.enableInfinityMSword) {
+			RecipeUtil.addRecipe( new ItemStack(ItemRegistry.InfinityM1Sword),
+					"       II",
+					"      III",
+					"     III ",
+					"    III  ",
+					" M III   ",
+					"  MII    ",
+					"  NM     ",
+					" N  M    ",
+					"I        ",
+					'M', ModItems.crystal_matrix_ingot,
+					'N', new ItemStack(ModBlocks.resource, 1, 0), // Neutronium Block
+					'I', new ItemStack(ModBlocks.resource, 1, 2)// Crytal matrix block
+					);
+		}
+		
+		//Balanced Infinity Sword
+		if(ConfigMain.enableBalancedInfinitySword) {
+			RecipeUtil.addRecipe( new ItemStack(ItemRegistry.BalancedInfinitySword),
+					"       II",
+					"      III",
+					"     III ",
+					"    III  ",
+					" M III   ",
+					"  MII    ",
+					"  NM     ",
+					" N  M    ",
+					"C        ",
+					'M', ModItems.crystal_matrix_ingot,
+					'N', new ItemStack(ModBlocks.resource, 1, 0), // Neutronium Block
+					'I', ModItems.infinity_ingot,
+					'C', ModItems.infinity_catalyst
+					);
+		}
 	}
 }
