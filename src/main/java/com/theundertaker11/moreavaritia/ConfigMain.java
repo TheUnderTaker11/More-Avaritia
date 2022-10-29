@@ -72,6 +72,9 @@ public class ConfigMain {
 	public static boolean enableStorageDrawers;
 	public static boolean enableCreativeStorageUpgrade;
 	
+	public static boolean enableThaumcraft;
+	public static boolean enableCreativeFluxSponge;
+	
 	public static boolean enableThermalExpansion;
 	public static boolean enableThermalCatalystItem;
 	public static boolean enableThermalCapacitor;
@@ -108,6 +111,7 @@ public class ConfigMain {
 		enableRS = config.getBoolean("Refined Storage", MASTER, true, "");
 		enableRFTools = config.getBoolean("RFTools", MASTER, true, "");
 		enableStorageDrawers = config.getBoolean("Storage Drawers", MASTER, true, "");
+		enableThaumcraft = config.getBoolean("Thaumcraft", MASTER, true, "");
 		enableThermalExpansion = config.getBoolean("Thermal Expansion", MASTER, true, "");
 		enableTinkers = config.getBoolean("Tinkers Construct", MASTER, true, "");
 		
@@ -189,6 +193,9 @@ public class ConfigMain {
 		//Start Storage Drawers
 		final String SD = "Storage Drawers Config";
 		enableCreativeStorageUpgrade = config.getBoolean("Enable Creative Storage Upgrade recipe", SD, true, "Doesn't allow infinite pulling from the drawer, only practically infinite storage.");
+		
+		final String THAUM = "Thaumcraft Config";
+		enableCreativeFluxSponge = config.getBoolean("Enable Creative Flux Sponge", THAUM, true, "Legit just a slight convience, no reason to disable.");
 		
 		//Start Thermal Expansion
 		final String TE = "Thermal Expansion Config";

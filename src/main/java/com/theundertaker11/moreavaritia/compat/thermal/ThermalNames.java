@@ -4,7 +4,7 @@ import com.theundertaker11.moreavaritia.Reference;
 
 public class ThermalNames {
 
-	private static final String id = Reference.ThermalExpansionModID+":";
+	private static final String id = Reference.ThermalExpansionModID + ":";
 	
 	public static final String UPGRADE = "thermalfoundation:upgrade";
 	public static final String CAPACITOR = id+"capacitor";

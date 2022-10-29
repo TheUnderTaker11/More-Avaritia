@@ -16,6 +16,7 @@ import com.theundertaker11.moreavaritia.compat.refinedstorage.RefinedStorageReci
 import com.theundertaker11.moreavaritia.compat.rftools.RFToolsRecipes;
 import com.theundertaker11.moreavaritia.compat.simplyjetpacks2.SimplyJetpacksRecipes;
 import com.theundertaker11.moreavaritia.compat.storagedrawers.StorageDrawersRecipes;
+import com.theundertaker11.moreavaritia.compat.thaumcraft.ThaumcraftRecipes;
 import com.theundertaker11.moreavaritia.compat.thermal.ThermalRecipes;
 import com.theundertaker11.moreavaritia.compat.tinkers.TinkersRecipes;
 
@@ -120,7 +121,12 @@ public class CompatMain {
 				StorageDrawersRecipes.init();
 			}catch(NoSuchMethodError e){}
 		}
-		
+		if(ConfigMain.enableThaumcraft)
+		{
+			try{
+				ThaumcraftRecipes.init();
+			}catch(NoSuchMethodError e){System.out.println("[MORE AVARITIA MAIN] Thaumcraft was enabled, but method didn't register due to modID");}
+		}
 		if(ConfigMain.enableThermalExpansion)
 		{
 			try{

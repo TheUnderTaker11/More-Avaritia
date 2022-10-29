@@ -31,7 +31,7 @@ public class StorageDrawersRecipes {
 					'N', ModItems.neutron_nugget,
 					'S', Items.NETHER_STAR,
 					'E', new ItemStack(ModUtils.getItemByName(SDNames.UPGRADE), 1, 4), //Emerald drawer upgrade
-					'D', new ItemStack(ModUtils.getItemByName(SDNames.BASIC_DRAWER), 1)//Basic Drawer
+					'D', new ItemStack(ModUtils.getItemByName(SDNames.BASIC_DRAWER), 1, 0)//Normal drawer
 					);
 		}
 	}
