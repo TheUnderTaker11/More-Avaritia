@@ -21,7 +21,7 @@ public class InfinityM1Hoe extends ItemHoe implements IItemModelProvider{
 		this.name = name;
 		setRegistryName(name);
 		setUnlocalizedName(name);
-		setCreativeTab(Avaritia.tab);
+		setCreativeTab(MoreAvaritiaMain.tab);
 	}
 
 	@Override

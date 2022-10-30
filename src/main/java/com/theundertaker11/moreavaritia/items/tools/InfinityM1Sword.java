@@ -20,7 +20,7 @@ public class InfinityM1Sword extends ItemSword implements IItemModelProvider{
 		this.name = name;
 		setRegistryName(name);
 		setUnlocalizedName(name);
-		setCreativeTab(Avaritia.tab);
+		setCreativeTab(MoreAvaritiaMain.tab);
 	}
 	
 	@Override

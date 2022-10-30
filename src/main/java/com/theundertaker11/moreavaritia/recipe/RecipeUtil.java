@@ -1,5 +1,7 @@
 package com.theundertaker11.moreavaritia.recipe;
 
+import com.theundertaker11.moreavaritia.Reference;
+
 import morph.avaritia.Avaritia;
 import morph.avaritia.init.ModItems;
 import morph.avaritia.recipe.AvaritiaRecipeManager;
@@ -27,10 +29,10 @@ public class RecipeUtil {
 	
 	public static void addCatalystInput(ItemStack stack) {
 		//ResourceLocation loc = new ResourceLocation(Avaritia.MOD_ID, "items/infinity_catalyst");
-		IExtremeRecipe recipe = AvaritiaRecipeManager.EXTREME_RECIPES.get(ModItems.infinity_catalyst.getItem().getRegistryName());
-		
-		if(recipe != null)
+		IExtremeRecipe recipe = AvaritiaRecipeManager.EXTREME_RECIPES.get(new ResourceLocation(Reference.InfinityCatalystResourceLocationString));
+		if(recipe != null) {
 			recipe.getIngredients().add(CraftingHelper.getIngredient(stack));
+		}
 	}
 
 }

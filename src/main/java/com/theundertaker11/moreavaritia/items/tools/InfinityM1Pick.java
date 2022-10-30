@@ -1,32 +1,35 @@
 package com.theundertaker11.moreavaritia.items.tools;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.List;
 import java.util.Set;
+
+import javax.annotation.Nullable;
 
 import com.google.common.collect.ImmutableSet;
 import com.theundertaker11.moreavaritia.ModUtils;
 import com.theundertaker11.moreavaritia.MoreAvaritiaMain;
 import com.theundertaker11.moreavaritia.render.IItemModelProvider;
 
-import morph.avaritia.Avaritia;
+import morph.avaritia.init.ModItems;
+import morph.avaritia.recipe.AvaritiaRecipeManager;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.enchantment.Enchantment;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Enchantments;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.nbt.NBTTagList;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.EnumHelper;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class InfinityM1Pick extends ItemPickaxe implements IItemModelProvider{
 	
@@ -38,7 +41,7 @@ public class InfinityM1Pick extends ItemPickaxe implements IItemModelProvider{
 		this.name = name;
 		setRegistryName(name);
 		setUnlocalizedName(name);
-		setCreativeTab(Avaritia.tab);
+		setCreativeTab(MoreAvaritiaMain.tab);
 	}
 	
 	@Override
@@ -50,6 +53,12 @@ public class InfinityM1Pick extends ItemPickaxe implements IItemModelProvider{
     public void setDamage(ItemStack stack, int damage) {
         super.setDamage(stack, 0);
     }
+	
+	@Override
+    @SideOnly(Side.CLIENT)
+	public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
+		tooltip.add("Shift Right Click to change enchantment mode");
+	}
 	
 	@Override
     public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, EnumHand hand) {

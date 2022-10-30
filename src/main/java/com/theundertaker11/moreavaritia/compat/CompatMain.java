@@ -6,6 +6,7 @@ import com.theundertaker11.moreavaritia.compat.appliedenergistics.AERecipes;
 import com.theundertaker11.moreavaritia.compat.bloodmagic.BMRecipes;
 import com.theundertaker11.moreavaritia.compat.botania.BotaniaRecipes;
 import com.theundertaker11.moreavaritia.compat.cyberware.CyberwearRecipes;
+import com.theundertaker11.moreavaritia.compat.danknull.DankNullRecipes;
 import com.theundertaker11.moreavaritia.compat.draconicevolution.DraconicEvolutionRecipes;
 import com.theundertaker11.moreavaritia.compat.enderio.EnderIORecipes;
 import com.theundertaker11.moreavaritia.compat.extrautils2.ExtraUtilitiesRecipes;
@@ -51,6 +52,12 @@ public class CompatMain {
 		{
 			try{
 				CyberwearRecipes.init();
+			}catch(NoSuchMethodError e){}
+		}
+		if(ConfigMain.enableDankNull) 
+		{
+			try{
+				DankNullRecipes.init();
 			}catch(NoSuchMethodError e){}
 		}
 		if(ConfigMain.enableDE)

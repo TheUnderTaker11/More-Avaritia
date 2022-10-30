@@ -28,6 +28,8 @@ public class ConfigMain {
 	public static boolean enableCyberwear;
 	public static boolean enableCyberwearCreativeCapacitor;
 	
+	public static boolean enableDankNull;
+	
 	public static boolean enableDE;
 	public static boolean enableDEInfinityCatalystItem;
 	public static boolean enableDECreativeCapacitor;
@@ -149,6 +151,9 @@ public class ConfigMain {
 		final String CYBER = "Cyberwear Config";
 		enableCyberwearCreativeCapacitor = config.getBoolean("Enable Creative Capacitor recipe", CYBER, true, "Currently Doesn't work.");
 		
+		//Start DankNull mod
+		enableDankNull = config.getBoolean("Enable Creative Dank/Null recipe", "Dank/Null config", true, "");
+		
 		//Start Draconic Evolution
 		final String DE = "Draconic Evolution Config";
 		enableDECreativeCapacitor = config.getBoolean("Enable Creative Flux Capacitor recipe", DE, true, "");
@@ -200,7 +205,7 @@ public class ConfigMain {
 		//Start Thermal Expansion
 		final String TE = "Thermal Expansion Config";
 		enableThermalCapacitor = config.getBoolean("Enable Creative Capacitor recipe", TE, true, "");
-		enableThermalCreativeUpgrade = config.getBoolean("Enable Creative Upgrade recipe", TE, true, "Machines upgraded with this can only be broken using the world breaker.");
+		enableThermalCreativeUpgrade = config.getBoolean("Enable Creative Upgrade recipe", TE, false, "");
 		
 		//Start Tinkers
 		final String TIC = "Tinkers Construct Config";

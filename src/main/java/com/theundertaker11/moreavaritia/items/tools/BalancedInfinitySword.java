@@ -25,7 +25,7 @@ public class BalancedInfinitySword extends ItemSword implements IItemModelProvid
 		this.name = name;
 		setRegistryName(name);
 		setUnlocalizedName(name);
-		setCreativeTab(Avaritia.tab);
+		setCreativeTab(MoreAvaritiaMain.tab);
 	}
 	
 	@Override
